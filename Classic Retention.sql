@@ -13,7 +13,7 @@ WITH order_info AS (
 SELECT first_order_month
   , COUNT(DISTINCT customer_id) AS month0
   , COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 1 MONTH) = order_month THEN customer_id
-						END) AS month1
+			END) AS month1
   , COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 2 MONTH) = order_month THEN customer_id
                         END) AS month2
   , COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 3 MONTH) = order_month THEN customer_id
