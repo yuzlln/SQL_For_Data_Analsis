@@ -7,6 +7,7 @@ WITH customer_proccessing AS (
     , DATE_FORMAT(last_order_date, '%Y-%m-01') AS last_order_month 
   FROM customer
 )
+  
 SELECT first_order_month
   , COUNT(DISTINCT customer_id) AS month0
   , COUNT(DISTINCT IF(DATE_ADD(first_order_month, INTERVAL 1 MONTH) <= last_order_month, customer_id, NULL)) AS month1
