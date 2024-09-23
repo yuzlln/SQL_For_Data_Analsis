@@ -9,7 +9,7 @@ CREATE TABLE purchase(
 INSERT INTO purchase
 VALUES ( 1, 37300,  'bag')
   , (2, 97300,  'jacket')
-  , ( 3, 114600, 'radio')
+  , (3, 114600, 'radio')
   , (4, 33300,  'jacket')
   , (5, 32800,  'bag')
   , (6,  26000,  'radio')
