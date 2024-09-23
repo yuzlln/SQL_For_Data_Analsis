@@ -59,7 +59,7 @@ SELECT p1.id
        FROM purchase AS p2
        WHERE p1.category = p2.category
            AND p1.id >= p2.id
-      ) AS cum
+       ) AS cum
 FROM purchase AS p1
 ORDER BY p1.category
     , p1.id;
