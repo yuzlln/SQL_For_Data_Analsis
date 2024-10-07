@@ -26,7 +26,7 @@ WITH pv AS (  -- 1. 제품 상세 페이지뷰를 본 세션
 )
 
 SELECT COUNT(DISTINCT p.user_id, p.session_id) AS pv -- 제품 상세 페이지를 본 세션 수
-	-- 제품 상세 페이지를 본 후 스크롤을 내린 세션 수
+  -- 제품 상세 페이지를 본 후 스크롤을 내린 세션 수
   , COUNT(DISTINCT s.user_id, s.session_id) AS scroll 
   -- 제품 상세 페이지를 본 후 스크롤을 내려 구매 버튼을 클릭한 세션 수
   , COUNT(DISTINCT c.user_id, c.session_id) AS click 
