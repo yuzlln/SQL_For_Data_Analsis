@@ -29,4 +29,4 @@ WHERE name NOT REGEXP '^[aeiou].*'; -- 첫 글자가 영어 모음이 아님
 -- 5. 특정 단어 포함 여부
 SELECT name
 FROM user_table
-WHERE name REGEXP 'a|e|i|o|u'; -- 영어 모음이 포함
+WHERE name REGEXP 'a|e|i|o|u'; -- 영어 모음 포함
