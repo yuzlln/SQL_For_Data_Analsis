@@ -1,20 +1,20 @@
--- Q1. 2020년 1월 가입자가 몇명인지 계산하는 쿼리문을 작성해주세요
+-- Q1. 2024년 1월 가입자가 몇명인지 계산하는 쿼리문을 작성해주세요
 SELECT COUNT(DISTINCT user_id) AS user_count
 FROM users
-WHERE DATE_FORMAT(registered_date, '%Y-%m') = '2020-01';
+WHERE DATE_FORMAT(registered_date, '%Y-%m') = '2024-01';
 
 
 
--- Q2. 유저별로 ‘첫 채팅을 시작한 시간’과 ‘첫 채팅을 건 아티클의 아이디’를 뽑아주세요
+-- Q2. 유저별로 첫 채팅을 시작한 시간과 첫 채팅을 건 아티클의 아이디를 뽑아주세요
 SELECT user_id
-	, article_id
-	, chat_time AS first_chat_time
+    , article_id
+    , chat_time AS first_chat_time
 FROM chat
 WHERE (user_id, chat_time) IN (SELECT user_id
-								, MIN(chat_time)
-								FROM chat
-								GROUP BY user_id
-								);
+			           , MIN(chat_time)
+			       FROM chat
+			       GROUP BY user_id
+		     	       );
 
 
 
