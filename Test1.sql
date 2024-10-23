@@ -18,11 +18,11 @@ WHERE (user_id, chat_time) IN (SELECT user_id
 
 
 
--- Q3. 2020년 12월 1일에 가입한 유저의 3일 리텐션을 구해주세요
-WITH december AS ( -- 2020년 12월 1일에 가입한 유저
+-- Q3. 2023년 12월 1일에 가입한 유저의 3일 리텐션을 구해주세요
+WITH december AS ( -- 2023년 12월 1일에 가입한 유저
 	SELECT *
 	FROM users
-	WHERE register_date = '2020-12-01'
+	WHERE register_date = '2023-12-01'
 )
 
 SELECT COUNT(DISTINCT v.user_id) / COUNT(DISTINCT d.user_id) AS retention_3day
